@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adhésion — DGLF</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      href="assets/logo_DGLF_with_devise_cercle.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <header class="site">
+      <div class="container topbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="assets/logo_DGLF_with_devise_cercle.png" alt="Logo DGLF"
+          /></a>
+          <div class="brand">
+            <h1>Adhérer à la DGLF</h1>
+            <p class="devise">Transmettre, Construire, Réussir ensemble</p>
+          </div>
+        </div>
+        <nav class="primary" aria-label="Navigation principale">
+          <a class="boutton" href="index.html#objectifs">Objectifs</a>
+          <a class="boutton" href="index.html#projets">Projets</a>
+          <a class="boutton" href="index.html#documents">Documents</a>
+          <a class="boutton" href="mentions-legales.html">Mentions légales</a>
+          <!-- <div class="inline-controls">
+            <label for="theme" class="muted" style="font-size: 0.85rem"
+              >Thème</label
+            ><select id="theme" class="theme">
+              <option value="defaut">Bleu</option>
+              <option value="vert">Vert</option>
+              <option value="ambre">Ambre</option>
+            </select>
+          </div> -->
+          <button id="menuToggle" class="menu-toggle" aria-label="Menu">
+            ☰
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="kicker">Formulaire d'adhésion</div>
+          <h2>Rejoindre l'association</h2>
+          <p class="muted">
+            Remplissez le formulaire ci-dessous. Vos données restent strictement
+            confidentielles et utilisées pour la gestion associative (voir
+            <a href="mentions-legales.html">Mentions légales</a>).
+          </p>
+        </div>
+        <aside class="card">
+          <h3 class="section-title">Infos utiles</h3>
+          <ul class="check">
+            <li>Cotisation annuelle (indicatif) : 50 €</li>
+            <li>Adhésion ouverte à tous</li>
+            <li>Toute la France</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    <section>
+      <div class="container">
+        <div class="card">
+          <form id="adhesionForm">
+            <div class="grid-3" style="grid-template-columns: 1fr 1fr 1fr">
+              <div>
+                <label>Nom <span aria-hidden="true">*</span></label>
+                <input
+                  placeholder="Votre nom"
+                  type="text"
+                  name="nom"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 0.6rem;
+                    border: 1px solid var(--border);
+                    border-radius: 0.6rem;
+                  "
+                />
+              </div>
+              <div>
+                <label>Prénom <span aria-hidden="true">*</span></label>
+                <input
+                  placeholder="Votre prénom"
+                  type="text"
+                  name="prenom"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 0.6rem;
+                    border: 1px solid var(--border);
+                    border-radius: 0.6rem;
+                  "
+                />
+              </div>
+              <div>
+                <label>Email <span aria-hidden="true">*</span></label>
+                <input
+                  placeholder="Votre adresse Email"
+                  type="email"
+                  name="email"
+                  required
+                  style="
+                    width: 100%;
+                    padding: 0.6rem;
+                    border: 1px solid var(--border);
+                    border-radius: 0.6rem;
+                  "
+                />
+              </div>
+              <div>
+                <label>Téléphone</label>
+                <input
+                  placeholder="Votre numéro de téléphone"
+                  type="tel"
+                  name="telephone"
+                  pattern="^[0-9 +().-]{6,}$"
+                  style="
+                    width: 100%;
+                    padding: 0.6rem;
+                    border: 1px solid var(--border);
+                    border-radius: 0.6rem;
+                  "
+                />
+              </div>
+              <div>
+                <label>Type d'adhésion</label>
+                <select
+                  name="type"
+                  style="
+                    width: 100%;
+                    padding: 0.6rem;
+                    border: 1px solid var(--border);
+                    border-radius: 0.6rem;
+                  "
+                >
+                  <option value="membre">Membre</option>
+                  <option value="benevole">Bénévole</option>
+                  <option value="donateur">Donateur</option>
+                </select>
+              </div>
+              <div>
+                <label>Ville</label>
+                <input
+                  placeholder="ville de résidence"
+                  type="text"
+                  name="ville"
+                  style="
+                    width: 100%;
+                    padding: 0.6rem;
+                    border: 1px solid var(--border);
+                    border-radius: 0.6rem;
+                  "
+                />
+              </div>
+            </div>
+            <div
+              style="
+                margin-top: 1rem;
+                display: flex;
+                gap: 0.6rem;
+                align-items: center;
+              "
+            >
+              <input id="rgpd" type="checkbox" required />
+              <label for="rgpd"
+                >J’accepte que mes données soient utilisées pour la gestion de
+                mon adhésion (RGPD).</label
+              >
+            </div>
+            <div class="cta" style="margin-top: 1rem">
+              <button class="btn primary" type="submit">Enregistrer</button>
+              <button class="btn ghost" type="button" id="exportCsv">
+                Exporter CSV
+              </button>
+              <button class="btn secondary" type="reset">Effacer</button>
+            </div>
+            <p
+              class="muted"
+              id="status"
+              role="status"
+              style="margin-top: 0.75rem"
+            ></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container cols">
+        <div>
+          <strong>DGLF</strong><br /><span class="muted"
+            >Diaspora Grands Lacs France</span
+          >
+        </div>
+        <div>
+          <strong>Liens</strong>
+          <ul class="muted">
+            <li><a href="index.html#objectifs">Objectifs</a></li>
+            <li><a href="index.html#projets">Projets</a></li>
+            <li><a href="index.html#documents">Documents</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Légal</strong>
+          <ul class="muted">
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container copyright">
+        © <span id="year"></span> DGLF — Tous droits réservés.
+      </div>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
