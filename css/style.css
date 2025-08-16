@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --brand: #1f4e79;
   --brand-2: #0ea5e9;
@@ -181,7 +182,7 @@ ul.check li {
   padding: 0.35rem 0;
 }
 ul.check li::before {
-  content: "✔";
+  content: "âœ”";
   margin-right: 0.5rem;
   color: green;
 }
