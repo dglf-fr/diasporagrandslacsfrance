@@ -1,4 +1,4 @@
-// DGLF — scripts du site (menu mobile, scroll fluide, thème, formulaire adhésion)
+// DGLF �?" scripts du site (menu mobile, scroll fluide, thème, formulaire adhésion)
 (function () {
   // Année automatique
   const yearEl = document.getElementById("year");
@@ -65,7 +65,7 @@
       localStorage.setItem("dglf_adherents", JSON.stringify(list));
       if (status)
         status.textContent =
-          "✔ Adhésion enregistrée localement (non transmise). Vous pouvez exporter en CSV.";
+          "�o" Adhésion enregistrée localement (non transmise). Vous pouvez exporter en CSV.";
       form.reset();
       const rgpd = document.getElementById("rgpd");
       if (rgpd) rgpd.checked = false;

@@ -182,7 +182,7 @@ ul.check li {
   padding: 0.35rem 0;
 }
 ul.check li::before {
-  content: "âœ”";
+  content: "â�"�?�";
   margin-right: 0.5rem;
   color: green;
 }
