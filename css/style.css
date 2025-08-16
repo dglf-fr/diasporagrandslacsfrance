@@ -10,6 +10,12 @@
   --footerText: #cbd5e1;
   --footerLink: #e2e8f0;
 }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
+    sans-serif;
+}
+
 [data-theme="vert"] {
   --brand: #166534;
   --brand-2: #16a34a;
