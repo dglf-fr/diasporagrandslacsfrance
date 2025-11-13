@@ -149,18 +149,22 @@ h3.section-title {
 .muted {
   color: var(--muted);
 }
-ul.check {
+.pictures_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 250px);
+}
+.pictures_container img {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.check_picture {
+  max-width: 50%;
+  height: auto;
   list-style: none;
-  padding: 0;
-  margin: 0.5rem 0;
-}
-ul.check li {
-  padding: 0.35rem 0;
-}
-ul.check li::before {
-  content: "✔";
-  margin-right: 0.5rem;
-  color: green;
 }
 .docs a {
   display: flex;
