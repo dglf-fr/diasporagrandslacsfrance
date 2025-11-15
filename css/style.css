@@ -156,14 +156,25 @@ h3.section-title {
   border-radius: 25px;
   object-fit: cover;
 }
+.section-title {
+  display: flex;
+  justify-content: center;
+}
 .all_image {
   display: flex;
   flex-direction: row;
-  justify-items: center;
-  gap: 15px;
+  justify-content: space-between;
+}
+.image {
+  display: flex;
+  justify-content: center;
+}
+.image h5 {
+  position: absolute;
+  padding-top: 200px;
 }
 .image img {
-  max-width: 90%;
+  max-width: 70%;
   border-radius: 20px;
   flex-grow: 1;
   flex-shrink: 1;
